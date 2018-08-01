@@ -12,6 +12,9 @@
         <module>cloud-api</module>
         <module>provider</module>
         <module>consumer</module>
+        <module>euraka</module>
+        <module>euraka02</module>
+        <module>euraka03</module>
     </modules>
     <name>cloud</name>
 
@@ -82,6 +85,12 @@
 
     <build>
         <finalName>cloud-demo</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <pluginManagement>
             <plugins>
                 <!-- resource插件 -->

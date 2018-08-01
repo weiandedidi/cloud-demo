@@ -14,8 +14,9 @@ public class DeptController
 {
 	@Autowired
 	private DeptService service;
+	//提供发现服务
 	@Autowired
-	private DiscoveryClient client;
+	DiscoveryClient client;
 
 	@RequestMapping(value = "/dept/add", method = RequestMethod.POST)
 	public boolean add(@RequestBody Dept dept)
@@ -35,7 +36,8 @@ public class DeptController
 		return service.list();
 	}
 
-	
+
+	//发现服务 相当于通过这个方法注册
 //	@Autowired
 //	private DiscoveryClient client;
 	@RequestMapping(value = "/dept/discovery", method = RequestMethod.GET)
@@ -44,7 +46,7 @@ public class DeptController
 		List<String> list = client.getServices();
 		System.out.println("**********" + list);
 
-		List<ServiceInstance> srvList = client.getInstances("MICROSERVICECLOUD-DEPT");
+		List<ServiceInstance> srvList = client.getInstances("qidi-dept");	//   name: qidi-dept   #微服务的名字spring.application.name
 		for (ServiceInstance element : srvList) {
 			System.out.println(element.getServiceId() + "\t" + element.getHost() + "\t" + element.getPort() + "\t"
 					+ element.getUri());
