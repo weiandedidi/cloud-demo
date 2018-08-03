@@ -9,15 +9,21 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>consumer</artifactId>
-    <description>部门微服务消费者</description>
+
+    <artifactId>feign-consumer</artifactId>
 
     <dependencies>
+
         <!-- 引入自己定义的api通用包，可以使用Dept部门Entity -->
         <dependency>
             <groupId>com.qidi</groupId>
             <artifactId>cloud-api</artifactId>
             <version>${project.version}</version>
+        </dependency>
+        <!--feign 相关包-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
         </dependency>
         <!-- Ribbon相关 ribbon需要和eureka整合-->
         <dependency>
@@ -48,6 +54,5 @@
         </dependency>
 
     </dependencies>
-
 
 </project>

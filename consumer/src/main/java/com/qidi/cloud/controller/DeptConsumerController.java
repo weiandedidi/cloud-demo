@@ -18,8 +18,8 @@ import java.util.List;
 @RestController
 public class DeptConsumerController {
 
-        private static final String REST_URL_PREFIX = "http://127.0.0.1:8001";
-//    private static final String REST_URL_PREFIX = "http://MICROSERVICECLOUD-DEPT";
+//        private static final String REST_URL_PREFIX = "http://127.0.0.1:8001";
+    private static final String REST_URL_PREFIX = "http://qidi-dept";  //http://${微服务名字访问}
 
 
     /**

@@ -15,6 +15,9 @@
         <module>euraka</module>
         <module>euraka02</module>
         <module>euraka03</module>
+        <module>provider-8002</module>
+        <module>provider-8003</module>
+        <module>feign-consumer</module>
     </modules>
     <name>cloud</name>
 
