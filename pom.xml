@@ -18,6 +18,7 @@
         <module>provider-8002</module>
         <module>provider-8003</module>
         <module>feign-consumer</module>
+        <module>provider-hystrix</module>
     </modules>
     <name>cloud</name>
 

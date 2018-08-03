@@ -15,7 +15,8 @@ import java.util.List;
  * Time: 下午2:44
  */
 //作用在哪个服务上
-@FeignClient(name = "qidi-dept")
+//@FeignClient(name = "qidi-dept")
+@FeignClient(name = "qidi-dept", fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
     @RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
