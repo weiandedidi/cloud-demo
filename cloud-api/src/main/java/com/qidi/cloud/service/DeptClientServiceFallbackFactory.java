@@ -7,13 +7,13 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
+ * 当关掉某些服务的时候，有时有返回的
  * User: qidi
  * Date: 2018/8/3
  * Time: 下午5:53
  */
 //组件化
-@Component
+@Component  // 不要忘记添加，不要忘记添加
 public class DeptClientServiceFallbackFactory implements FallbackFactory<DeptClientService> {
     @Override
     public DeptClientService create(Throwable throwable) {
