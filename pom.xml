@@ -20,6 +20,7 @@
         <module>consumer-feign</module>
         <module>consumer-hystrix-dashboard</module>
         <module>provider-hystrix</module>
+        <module>zuul-gateway</module>
     </modules>
     <name>cloud</name>
 

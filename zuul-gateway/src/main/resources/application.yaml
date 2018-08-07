@@ -1,0 +1,22 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: qidi-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: qidi-9527.com
+    prefer-ip-address: true
+
+zuul:
+  prefix: /qidi   # 服务前缀 /aiqi/mydept/**
+#  ignored-services: qidi-dept   #忽略原来的访问路径 通过服务名字访问失效
+  ignored-services: "*"         #全部服务名字访问隐藏
+  routes:
+    mydept.serviceId: qidi-dept
+    mydept.path: /mydept/**
